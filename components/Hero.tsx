@@ -2,11 +2,20 @@ import React from 'react';
 import { COMPANY_INFO } from '../constants';
 
 const Hero: React.FC = () => {
+  const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.href.split('#')[1];
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       id="home" 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('https://picsum.photos/seed/civil-eng/1920/1080')" }}
+      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3')" }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 text-center text-white px-4">
@@ -19,6 +28,7 @@ const Hero: React.FC = () => {
         <div className="animate-fade-in-up" style={{ animationDelay: '1s' }}>
           <a
             href="#services"
+            onClick={handleScrollClick}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
           >
             Explore Our Services
