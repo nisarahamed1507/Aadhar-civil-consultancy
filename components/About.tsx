@@ -5,7 +5,6 @@ import { Target, Eye, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-reac
 
 const carouselImages = [
   'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&h=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1581092448342-54f2a7422a3d?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&h=400&auto=format&fit=crop',
