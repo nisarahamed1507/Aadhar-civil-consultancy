@@ -9,3 +9,8 @@ export interface Value {
   title: string;
   description: string;
 }
+
+export interface Sector {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+}

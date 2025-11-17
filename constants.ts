@@ -1,13 +1,15 @@
 
-import type { Service, Value } from './types';
+import type { Service, Value, Sector } from './types';
 import {
   BuildingIcon, TestTubeIcon, RulerIcon, HardHatIcon, MapIcon, FileTextIcon, RoadIcon, SearchIcon,
-  ScalingIcon, TrainIcon, WaveformIcon, CheckShieldIcon, TargetIcon, AtomIcon, HandshakeIcon, LightbulbIcon, ShieldCheckIcon
+  ScalingIcon, TrainIcon, WaveformIcon, CheckShieldIcon, TargetIcon, AtomIcon, HandshakeIcon, LightbulbIcon, ShieldCheckIcon,
+  HomeIcon, CommercialBuildingIcon, FactoryIcon, NetworkIcon, LandmarkIcon
 } from './components/icons/FeatureIcons';
 
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
+  { name: 'Sectors', href: '#sectors' },
   { name: 'Values', href: '#values' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -47,6 +49,14 @@ export const SERVICES: Service[] = [
   { icon: TrainIcon, title: 'Railway Engineering', description: 'Specialized engineering for railway infrastructure projects.' },
   { icon: WaveformIcon, title: 'Advanced Field Testing', description: 'Utilizing FWD, NSV, and Bump Integrator for superior analysis.' },
   { icon: CheckShieldIcon, title: 'Quality Assurance', description: 'Implementing systems to guarantee project excellence.' },
+];
+
+export const SECTORS: Sector[] = [
+  { icon: HomeIcon, title: 'Residential' },
+  { icon: CommercialBuildingIcon, title: 'Commercial' },
+  { icon: FactoryIcon, title: 'Industrial' },
+  { icon: NetworkIcon, title: 'Infrastructure' },
+  { icon: LandmarkIcon, title: 'Government Projects' },
 ];
 
 export const VALUES: Value[] = [

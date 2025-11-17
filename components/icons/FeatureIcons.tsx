@@ -17,6 +17,11 @@ import {
   Atom,
   Handshake,
   Lightbulb,
+  Home,
+  Building2,
+  Factory,
+  Network,
+  Landmark,
 } from 'lucide-react';
 
 // Renaming for clarity and potential customization in the future.
@@ -39,3 +44,10 @@ export const AtomIcon = Atom;
 export const HandshakeIcon = Handshake;
 export const LightbulbIcon = Lightbulb;
 export const ShieldCheckIcon = ShieldCheck;
+
+// Icons for Sectors
+export const HomeIcon = Home;
+export const CommercialBuildingIcon = Building2;
+export const FactoryIcon = Factory;
+export const NetworkIcon = Network;
+export const LandmarkIcon = Landmark;
