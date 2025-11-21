@@ -4,13 +4,17 @@ import { COMPANY_INFO } from '../constants';
 import { Target, Eye, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const carouselImages = [
-  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&h=400&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-541888946425-d81bb19240f5?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&h=400&auto=format&fit=crop',
 ];
 
-const About: React.FC = () => {
+interface AboutProps {
+  showVideo?: boolean;
+}
+
+const About: React.FC<AboutProps> = ({ showVideo = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -31,12 +35,11 @@ const About: React.FC = () => {
   };
 
   useEffect(() => {
-    if (!isPaused) {
-      const slider = setInterval(goToNext, 5000); // Change slide every 5 seconds
+    if (!isPaused && !showVideo) {
+      const slider = setInterval(goToNext, 5000);
       return () => clearInterval(slider);
     }
-  }, [currentIndex, isPaused, goToNext]);
-
+  }, [currentIndex, isPaused, goToNext, showVideo]);
 
   return (
     <section id="about" className="py-20 md:py-28 bg-white">
@@ -78,56 +81,73 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          <div 
-            className="relative w-full max-w-[600px] h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            aria-roledescription="carousel"
-            aria-label="Image carousel of our projects"
-          >
-            <div 
-              className="flex h-full transition-transform ease-in-out duration-700" 
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {carouselImages.map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt={`Civil engineering project showcase ${index + 1}`}
-                  className="w-full h-full object-cover flex-shrink-0"
-                  loading="lazy"
-                  aria-hidden={currentIndex !== index}
-                />
-              ))}
-            </div>
-            
-            <button 
-              onClick={goToPrevious} 
-              className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button 
-              onClick={goToNext} 
-              className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={24} />
-            </button>
 
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2" role="group" aria-label="Carousel navigation">
-              {carouselImages.map((_, slideIndex) => (
-                <button
-                  key={slideIndex}
-                  onClick={() => goToSlide(slideIndex)}
-                  aria-label={`Go to slide ${slideIndex + 1}`}
-                  className={`w-3 h-3 rounded-full transition-colors ${currentIndex === slideIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'}`}
-                ></button>
-              ))}
+          {showVideo ? (
+            /* Video Section - For Home Page */
+            <div className="relative w-full max-w-[600px] h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl bg-black">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Ax1U04c4gdc"
+                title="Civil Engineering Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0"
+              ></iframe>
             </div>
-          </div>
+          ) : (
+            /* Image Carousel - For About Page */
+            <div
+              className="relative w-full max-w-[600px] h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              aria-roledescription="carousel"
+              aria-label="Image carousel of our projects"
+            >
+              <div
+                className="flex h-full transition-transform ease-in-out duration-700"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {carouselImages.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`Civil engineering project showcase ${index + 1}`}
+                    className="w-full h-full object-cover flex-shrink-0"
+                    loading="lazy"
+                    aria-hidden={currentIndex !== index}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={goToPrevious}
+                className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={goToNext}
+                className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                aria-label="Next slide"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2" role="group" aria-label="Carousel navigation">
+                {carouselImages.map((_, slideIndex) => (
+                  <button
+                    key={slideIndex}
+                    onClick={() => goToSlide(slideIndex)}
+                    aria-label={`Go to slide ${slideIndex + 1}`}
+                    className={`w-3 h-3 rounded-full transition-colors ${currentIndex === slideIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'}`}
+                  ></button>
+                ))}
+              </div>
+            </div>
+          )}
 
         </div>
       </div>

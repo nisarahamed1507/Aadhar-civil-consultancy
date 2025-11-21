@@ -30,9 +30,13 @@ const Footer: React.FC = () => {
                 <Mail size={16} className="mr-3 flex-shrink-0 text-blue-400" />
                 <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-white transition-colors">{COMPANY_INFO.email}</a>
               </li>
-              <li className="flex items-center">
-                <Phone size={16} className="mr-3 flex-shrink-0 text-blue-400" />
-                <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-white transition-colors">{COMPANY_INFO.phone}</a>
+              <li className="flex items-start">
+                <Phone size={16} className="mr-3 mt-1 flex-shrink-0 text-blue-400" />
+                <div className="space-y-1">
+                  <a href={`tel:${COMPANY_INFO.phone}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone}</a>
+                  <a href={`tel:${COMPANY_INFO.phone2}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone2}</a>
+                  <a href={`tel:${COMPANY_INFO.phone3}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone3}</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -45,7 +49,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All Rights Reserved.</p>
         </div>

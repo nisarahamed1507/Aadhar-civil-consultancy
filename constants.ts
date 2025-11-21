@@ -7,12 +7,16 @@ import {
 } from './components/icons/FeatureIcons';
 
 export const NAV_LINKS = [
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Sectors', href: '#sectors' },
-  { name: 'Values', href: '#values' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Sectors', href: '/sectors' },
+  { name: 'Values', href: '/values' },
+  { name: 'Gallery', href: '/gallery' },
+  { name: 'Contact', href: '/contact' },
 ];
+
+
 
 export const COMPANY_INFO = {
   name: "AADHAR CIVIL CONSULTANCY SERVICES PVT. LTD.",
@@ -29,10 +33,12 @@ export const COMPANY_INFO = {
     "Use of modern tools and standards for structural design and testing.",
     "One-stop solution: design, testing, supervision, and certification."
   ],
-  address: "Registered Address, City, State, ZIP",
-  email: "contact@aadharconsultancy.com",
-  phone: "+91 12345 67890",
-  cin: "U12345AB2026PTC123456",
+  address: "H.No. 3316-W61-Z6, Ratwat pura colony phase-1, Raipur, Chhattisgarh, India - 492013",
+  email: "aadharccspl@gmail.com",
+  phone: "+91 98066 60555",
+  phone2: "+91 95507 57756",
+  phone3: "+91 89787 66436",
+  cin: "U42900CT2025PTC019026",
   gst: "GSTIN (once allotted)"
 };
 
