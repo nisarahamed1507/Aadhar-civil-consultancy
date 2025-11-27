@@ -4,61 +4,97 @@ import { X } from 'lucide-react';
 const GalleryPage: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-    // Sample gallery images - replace with actual project images
+    // Gallery images from public/assets/images/gallery folder
     const galleryImages = [
         {
             id: 1,
-            url: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop',
-            title: 'Commercial Building Project',
-            category: 'Commercial'
+            url: '/assets/images/gallery/IMG-20251127-WA0007.jpg',
+            title: 'Project 1',
+            category: 'Infrastructure'
         },
         {
             id: 2,
-            url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&auto=format&fit=crop',
-            title: 'Residential Complex',
-            category: 'Residential'
-        },
-        {
-            id: 3,
-            url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop',
-            title: 'Urban Infrastructure',
-            category: 'Infrastructure'
-        },
-        {
-            id: 4,
-            url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop',
-            title: 'Modern Office Complex',
+            url: '/assets/images/gallery/IMG-20251127-WA0008.jpg',
+            title: 'Project 2',
             category: 'Commercial'
         },
         {
-            id: 5,
-            url: 'https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&auto=format&fit=crop',
-            title: 'Road Construction',
+            id: 3,
+            url: '/assets/images/gallery/IMG-20251127-WA0009.jpg',
+            title: 'Project 3',
+            category: 'Residential'
+        },
+        {
+            id: 4,
+            url: '/assets/images/gallery/IMG-20251127-WA0010.jpg',
+            title: 'Project 4',
             category: 'Infrastructure'
         },
         {
+            id: 5,
+            url: '/assets/images/gallery/IMG-20251127-WA0011.jpg',
+            title: 'Project 5',
+            category: 'Commercial'
+        },
+        {
             id: 6,
-            url: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&auto=format&fit=crop',
-            title: 'Bridge Engineering',
+            url: '/assets/images/gallery/IMG-20251127-WA0012.jpg',
+            title: 'Project 6',
             category: 'Infrastructure'
         },
         {
             id: 7,
-            url: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&auto=format&fit=crop',
-            title: 'Luxury Apartments',
+            url: '/assets/images/gallery/IMG-20251127-WA0013.jpg',
+            title: 'Project 7',
             category: 'Residential'
         },
         {
             id: 8,
-            url: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&auto=format&fit=crop',
-            title: 'Shopping Mall Development',
+            url: '/assets/images/gallery/IMG-20251127-WA0014.jpg',
+            title: 'Project 8',
             category: 'Commercial'
         },
         {
             id: 9,
-            url: 'https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop',
-            title: 'Mixed-Use Development',
+            url: '/assets/images/gallery/IMG-20251127-WA0015.jpg',
+            title: 'Project 9',
+            category: 'Infrastructure'
+        },
+        {
+            id: 10,
+            url: '/assets/images/gallery/IMG-20251127-WA0016.jpg',
+            title: 'Project 10',
             category: 'Commercial'
+        },
+        {
+            id: 11,
+            url: '/assets/images/gallery/IMG-20251127-WA0017.jpg',
+            title: 'Project 11',
+            category: 'Residential'
+        },
+        {
+            id: 12,
+            url: '/assets/images/gallery/IMG-20251127-WA0018.jpg',
+            title: 'Project 12',
+            category: 'Infrastructure'
+        },
+        {
+            id: 13,
+            url: '/assets/images/gallery/IMG-20251127-WA0019.jpg',
+            title: 'Project 13',
+            category: 'Commercial'
+        },
+        {
+            id: 14,
+            url: '/assets/images/gallery/IMG-20251127-WA0020.jpg',
+            title: 'Project 14',
+            category: 'Infrastructure'
+        },
+        {
+            id: 15,
+            url: '/assets/images/gallery/IMG-20251127-WA0021.jpg',
+            title: 'Project 15',
+            category: 'Residential'
         }
     ];
 
@@ -85,6 +121,8 @@ const GalleryPage: React.FC = () => {
                                 src={image.url}
                                 alt={image.title}
                                 className="w-full h-64 object-cover"
+                                loading="lazy"
+                                decoding="async"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
@@ -115,6 +153,7 @@ const GalleryPage: React.FC = () => {
                             alt="Full size"
                             className="max-w-full max-h-full object-contain"
                             onClick={(e) => e.stopPropagation()}
+                            loading="lazy"
                         />
                     </div>
                 )}
