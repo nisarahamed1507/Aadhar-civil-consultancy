@@ -4,6 +4,7 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Sectors from '../components/Sectors';
 import Values from '../components/Values';
+import Team from '../components/Team';
 import Brochure from '../components/Brochure';
 import Contact from '../components/Contact';
 
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
             <Services />
             <Sectors />
             <Values />
+            <Team />
             <Brochure />
             <Contact />
         </>

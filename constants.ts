@@ -1,5 +1,5 @@
 
-import type { Service, Value, Sector } from './types';
+import type { Service, Value, Sector, TeamMember } from './types';
 import {
   BuildingIcon, TestTubeIcon, RulerIcon, HardHatIcon, MapIcon, FileTextIcon, RoadIcon, SearchIcon,
   ScalingIcon, TrainIcon, WaveformIcon, CheckShieldIcon, TargetIcon, AtomIcon, HandshakeIcon, LightbulbIcon, ShieldCheckIcon,
@@ -72,4 +72,28 @@ export const VALUES: Value[] = [
   { icon: HardHatIcon, title: 'Professionalism', description: 'Demonstrating expertise and ethical conduct in all interactions.' },
   { icon: LightbulbIcon, title: 'Innovation', description: 'Leveraging modern technology and creative solutions for challenges.' },
   { icon: AtomIcon, title: 'Ethical Engineering', description: 'Adhering to a strict code of ethics to ensure safety and fairness.' },
+];
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    name: 'Dr. Vikas Kumar Reddy',
+    role: 'Ph.D., Transportation Engineering',
+    description: 'Post-graduated from SVNIT-Surat and Ph.D. from NIT Raipur with 10 years of experience in Highways and Infrastructure Design. Specializes in pavement systems design, performance evaluation, quality control, and competent in AASHTO and IRC guidelines.',
+    image: '/assets/images/vikas.jpg',
+    cvPath: '/assets/images/Vikas.pdf'
+  },
+  {
+    name: 'Ashish Mishra',
+    role: 'Director & Technical Operations',
+    description: 'Expert in Transportation Planning, Traffic Engineering, Pavement Engineering, and Life Cycle Analysis. Specialized in Road Safety Audit, Recycling Techniques in pavement engineering, and Quality Assurance & Control in field investigations.',
+    image: '/assets/images/aashish.jpg',
+    cvPath: '/assets/images/Ashish_Mishra.pdf'
+  },
+  {
+    name: 'Team Member Name',
+    role: 'Position Title',
+    description: 'Professional description and expertise will be added here. This is a placeholder team member profile that can be updated with actual information later.',
+    image: '/assets/images/1.jpg',
+    cvPath: '/assets/images/Team_Member_CV.pdf'
+  }
 ];
