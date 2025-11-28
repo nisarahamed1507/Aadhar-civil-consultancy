@@ -43,9 +43,9 @@ const Brochure: React.FC = () => {
 
         try {
             // EmailJS configuration
-            const serviceId = 'YOUR_SERVICE_ID';
-            const templateId = 'YOUR_TEMPLATE_ID';
-            const publicKey = 'YOUR_PUBLIC_KEY';
+            const serviceId = ' service_tm9955l';
+            const templateId = 'template_6bj5b4e';
+            const publicKey = 'G6QPgxfgdf6vm1eSp';
 
             const templateParams = {
                 from_name: formData.name,
