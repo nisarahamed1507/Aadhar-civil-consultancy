@@ -90,9 +90,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     cvPath: '/assets/images/Ashish_Mishra.pdf'
   },
   {
-    name: 'Team Member Name',
-    role: 'Position Title',
-    description: 'Professional description and expertise will be added here. This is a placeholder team member profile that can be updated with actual information later.',
+    name: 'Panigrahi Ashok',
+    role: 'Director HR',
+    description: 'Ashok Post graduated from SVNIT Surat in Transportation Engineering and Planning in Civil Engineering Department.  Having an experience of 5 years in the field of Highway Designs and testing  Associate member of Institute of Engineers (India)',
     image: '/assets/images/1.jpg',
     cvPath: '/assets/images/Team_Member_CV.pdf'
   }
