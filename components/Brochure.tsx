@@ -43,7 +43,7 @@ const Brochure: React.FC = () => {
 
         try {
             // EmailJS configuration
-            const serviceId = ' service_tm9955l';
+            const serviceId = 'service_tm9955l';
             const templateId = 'template_6bj5b4e';
             const publicKey = 'G6QPgxfgdf6vm1eSp';
 
