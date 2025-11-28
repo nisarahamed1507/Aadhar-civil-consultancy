@@ -13,6 +13,28 @@ const Brochure: React.FC = () => {
     const [showFormModal, setShowFormModal] = useState(false);
     const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [submitError, setSubmitError] = useState('');
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+    const validateForm = () => {
+        const newErrors: { [key: string]: string } = {};
+
+        if (!formData.name.trim() || formData.name.length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+        }
+
+        const phoneDigits = formData.phone.replace(/\D/g, '');
+        if (!/^\d{10}$/.test(phoneDigits)) {
+            newErrors.phone = 'Please enter a valid 10-digit phone number';
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
@@ -38,6 +60,11 @@ const Brochure: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
         setIsSubmitting(true);
         setSubmitError('');
 
@@ -79,9 +106,10 @@ const Brochure: React.FC = () => {
                 setShowSuccessModal(false);
             }, 3000);
 
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error sending email:', error);
-            setSubmitError('Failed to submit form. Please try again or contact us directly.');
+            const errorMessage = error?.text || error?.message || 'Unknown error';
+            setSubmitError(`Failed to submit form: ${errorMessage}. Please try again or contact us directly.`);
             setIsSubmitting(false);
         }
     };
@@ -183,9 +211,13 @@ const Brochure: React.FC = () => {
                                         required
                                         value={formData.name}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${errors.name ? 'border-red-500' : 'border-gray-300'
+                                            }`}
                                         placeholder="Enter your full name"
                                     />
+                                    {errors.name && (
+                                        <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                                    )}
                                 </div>
 
                                 <div>
@@ -199,9 +231,13 @@ const Brochure: React.FC = () => {
                                         required
                                         value={formData.phone}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                                            }`}
                                         placeholder="Enter your phone number"
                                     />
+                                    {errors.phone && (
+                                        <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                                    )}
                                 </div>
 
                                 <div>
@@ -215,9 +251,13 @@ const Brochure: React.FC = () => {
                                         required
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${errors.email ? 'border-red-500' : 'border-gray-300'
+                                            }`}
                                         placeholder="Enter your email address"
                                     />
+                                    {errors.email && (
+                                        <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                                    )}
                                 </div>
 
                                 <div>
