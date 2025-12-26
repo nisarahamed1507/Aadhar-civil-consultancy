@@ -4,7 +4,7 @@ import { COMPANY_INFO } from '../constants';
 import { Target, Eye, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const carouselImages = [
-  'https://images.unsplash.com/photo-541888946425-d81bb19240f5?q=80&w=600&h=400&auto=format&fit=crop',
+  'https://www.novatr.com/blog/civil-engineering-final-year-projects',
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&h=400&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&h=400&auto=format&fit=crop',
