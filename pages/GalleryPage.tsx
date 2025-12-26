@@ -8,91 +8,91 @@ const GalleryPage: React.FC = () => {
     const galleryImages = [
         {
             id: 1,
-            url: '/assets/images/gallery/IMG-20251127-WA0007.jpg',
+            url: '/assets/images/gallery/blan-air-permiability.jpg',
             title: 'Project 1',
             category: 'Infrastructure'
         },
         {
             id: 2,
-            url: '/assets/images/gallery/IMG-20251127-WA0008.jpg',
+            url: '/assets/images/gallery/cbr-testing-machine.jpg',
             title: 'Project 2',
             category: 'Commercial'
         },
         {
             id: 3,
-            url: '/assets/images/gallery/IMG-20251127-WA0009.jpg',
+            url: '/assets/images/gallery/digital-compression-testing-machine.jpg',
             title: 'Project 3',
             category: 'Residential'
         },
         {
             id: 4,
-            url: '/assets/images/gallery/IMG-20251127-WA0010.jpg',
+            url: '/assets/images/gallery/direct-sher-machine.jpg',
             title: 'Project 4',
             category: 'Infrastructure'
         },
         {
             id: 5,
-            url: '/assets/images/gallery/IMG-20251127-WA0011.jpg',
+            url: '/assets/images/gallery/flaki-guage,elongation-guage.jpg',
             title: 'Project 5',
             category: 'Commercial'
         },
         {
             id: 6,
-            url: '/assets/images/gallery/IMG-20251127-WA0012.jpg',
+            url: '/assets/images/gallery/humidity-chamber.jpg',
             title: 'Project 6',
             category: 'Infrastructure'
         },
         {
             id: 7,
-            url: '/assets/images/gallery/IMG-20251127-WA0013.jpg',
+            url: '/assets/images/gallery/liquid-limit-device.jpg',
             title: 'Project 7',
             category: 'Residential'
         },
         {
             id: 8,
-            url: '/assets/images/gallery/IMG-20251127-WA0014.jpg',
+            url: '/assets/images/gallery/motor-cube-vibrating-machine.jpg',
             title: 'Project 8',
             category: 'Commercial'
         },
         {
             id: 9,
-            url: '/assets/images/gallery/IMG-20251127-WA0015.jpg',
+            url: '/assets/images/gallery/plastic-limit-apparatus.jpg',
             title: 'Project 9',
             category: 'Infrastructure'
         },
         {
             id: 10,
-            url: '/assets/images/gallery/IMG-20251127-WA0016.jpg',
+            url: '/assets/images/gallery/rebound-hammer.jpg',
             title: 'Project 10',
             category: 'Commercial'
         },
         {
             id: 11,
-            url: '/assets/images/gallery/IMG-20251127-WA0017.jpg',
+            url: '/assets/images/gallery/setting-test-of-cement.jpg',
             title: 'Project 11',
             category: 'Residential'
         },
         {
             id: 12,
-            url: '/assets/images/gallery/IMG-20251127-WA0018.jpg',
+            url: '/assets/images/gallery/shrinkage-limit.jpg',
             title: 'Project 12',
             category: 'Infrastructure'
         },
         {
             id: 13,
-            url: '/assets/images/gallery/IMG-20251127-WA0019.jpg',
+            url: '/assets/images/gallery/soil-permiability.jpg',
             title: 'Project 13',
             category: 'Commercial'
         },
         {
             id: 14,
-            url: '/assets/images/gallery/IMG-20251127-WA0020.jpg',
+            url: '/assets/images/gallery/specific-gravity-basket.jpg',
             title: 'Project 14',
             category: 'Infrastructure'
         },
         {
             id: 15,
-            url: '/assets/images/gallery/IMG-20251127-WA0021.jpg',
+            url: '/assets/images/gallery/water-bath.jpg',
             title: 'Project 15',
             category: 'Residential'
         }
