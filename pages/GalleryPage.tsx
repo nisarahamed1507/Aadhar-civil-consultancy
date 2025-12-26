@@ -8,7 +8,7 @@ const GalleryPage: React.FC = () => {
     const galleryImages = [
         {
             id: 1,
-            url: '/assets/images/gallery/blan-air-permiability.jpg',
+            url: '/assets/images/gallery/blain-air-permiability.jpg',
             title: 'Project 1',
             category: 'Infrastructure'
         },
