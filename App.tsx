@@ -10,11 +10,13 @@ import SectorsPage from './pages/SectorsPage';
 import ValuesPage from './pages/ValuesPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="bg-gray-50 min-h-screen font-sans text-gray-800">
         <Header />
         <main>
