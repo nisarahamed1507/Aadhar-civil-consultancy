@@ -38,6 +38,7 @@ export const COMPANY_INFO = {
   phone: "+91 98066 60555",
   phone2: "+91 95507 57756",
   phone3: "+91 89787 66436",
+  phone4: "+91 82695 50028",
   cin: "U42900CT2025PTC019026",
   gst: "GSTIN (once allotted)"
 };

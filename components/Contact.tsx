@@ -28,9 +28,9 @@ const Contact: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const serviceId = 'service_tm9955l';
-      const templateId = 'template_6bj5b4e';
-      const publicKey = 'G6QPgxfgdf6vm1eSp';
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
       const templateParams = {
         from_name: formData.name,
@@ -113,6 +113,7 @@ const Contact: React.FC = () => {
                     <a href={`tel:${COMPANY_INFO.phone}`} className="block hover:text-blue-600 transition-colors">{COMPANY_INFO.phone}</a>
                     <a href={`tel:${COMPANY_INFO.phone2}`} className="block hover:text-blue-600 transition-colors">{COMPANY_INFO.phone2}</a>
                     <a href={`tel:${COMPANY_INFO.phone3}`} className="block hover:text-blue-600 transition-colors">{COMPANY_INFO.phone3}</a>
+                    <a href={`tel:${COMPANY_INFO.phone4}`} className="block hover:text-blue-600 transition-colors">{COMPANY_INFO.phone4}</a>
                   </div>
                 </div>
               </div>

@@ -36,6 +36,7 @@ const Footer: React.FC = () => {
                   <a href={`tel:${COMPANY_INFO.phone}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone}</a>
                   <a href={`tel:${COMPANY_INFO.phone2}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone2}</a>
                   <a href={`tel:${COMPANY_INFO.phone3}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone3}</a>
+                  <a href={`tel:${COMPANY_INFO.phone4}`} className="block hover:text-white transition-colors">{COMPANY_INFO.phone4}</a>
                 </div>
               </li>
             </ul>
