@@ -9,7 +9,7 @@ interface SEOProps {
     ogImage?: string;
 }
 
-const SITE_URL = 'https://www.aadharccspl.com';
+const SITE_URL = 'https://www.aadharcivilconsultancy.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/images/og-image.jpg`;
 const SITE_NAME = 'Aadhar Civil Consultancy Services Pvt. Ltd.';
 
