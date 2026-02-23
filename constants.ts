@@ -78,7 +78,7 @@ export const VALUES: Value[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Dr. Vikas Kumar Reddy',
-    role: 'Ph.D., Transportation Engineering',
+    role: 'Director & Relationship Manager',
     description: 'Post-graduated from SVNIT-Surat and Ph.D. from NIT Raipur with 10 years of experience in Highways and Infrastructure Design. Specializes in pavement systems design, performance evaluation, quality control, and competent in AASHTO and IRC guidelines.',
     image: '/assets/images/vikas.jpg',
     cvPath: '/assets/images/Vikas.pdf'
