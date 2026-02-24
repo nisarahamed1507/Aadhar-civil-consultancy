@@ -40,7 +40,7 @@ export const COMPANY_INFO = {
   phone3: "+91 89787 66436",
   phone4: "+91 82695 50028",
   cin: "U42900CT2025PTC019026",
-  gst: "GSTIN (once allotted)"
+  gst: "22ABECA0591N1ZN"
 };
 
 export const SERVICES: Service[] = [
@@ -81,20 +81,17 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Director & Relationship Manager',
     description: 'Post-graduated from SVNIT-Surat and Ph.D. from NIT Raipur with 10 years of experience in Highways and Infrastructure Design. Specializes in pavement systems design, performance evaluation, quality control, and competent in AASHTO and IRC guidelines.',
     image: '/assets/images/vikas.jpg',
-    cvPath: '/assets/images/Vikas.pdf'
   },
   {
     name: 'Ashish Mishra',
     role: 'Director & Technical Operations',
     description: 'Expert in Transportation Planning, Traffic Engineering, Pavement Engineering, and Life Cycle Analysis. Specialized in Road Safety Audit, Recycling Techniques in pavement engineering, and Quality Assurance & Control in field investigations.',
     image: '/assets/images/aashish.jpg',
-    cvPath: '/assets/images/Ashish_Mishra.pdf'
   },
   {
     name: 'Panigrahi Ashok',
     role: 'Director HR',
     description: 'Ashok Post graduated from SVNIT Surat in Transportation Engineering and Planning in Civil Engineering Department.  Having an experience of 5 years in the field of Highway Designs and testing  Associate member of Institute of Engineers (India)',
     image: '/assets/images/1.jpg',
-    cvPath: '/assets/images/Team_Member_CV.pdf'
   }
 ];
