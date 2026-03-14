@@ -8,7 +8,7 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ className, light = false }) => {
   return (
     <img
-      src="/assets/images/logo-aadhar.jpeg"
+      src="/assets/images/logo-aadhar.png"
       alt="Aadhar Logo"
       className={className}
     />
