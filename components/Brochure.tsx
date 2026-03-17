@@ -5,7 +5,7 @@ const Brochure: React.FC = () => {
     const handleDownloadClick = () => {
         // Trigger download
         const link = document.createElement('a');
-        link.href = '/assets/brochures/Company_Details[1].pdf';
+        //link.href = '/assets/brochures/Company_Details[1].pdf';
         link.download = 'Company_Details.pdf';
         document.body.appendChild(link);
         link.click();
