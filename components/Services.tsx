@@ -4,22 +4,24 @@ import { SERVICES } from '../constants';
 import type { Service } from '../types';
 
 const ServiceCard: React.FC<{ service: Service }> = ({ service }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-    <div className="flex-shrink-0 h-16 w-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
+  <div className="brand-card rounded-[1.5rem] p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
+    <div className="brand-icon-chip mb-4 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full">
       <service.icon className="h-8 w-8" />
     </div>
-    <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-    <p className="text-gray-600 text-sm">{service.description}</p>
+    <h3 className="mb-2 text-lg font-semibold text-[#263646]">{service.title}</h3>
+    <p className="body-copy text-sm">{service.description}</p>
   </div>
 );
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 md:py-28 bg-gray-50">
+    <section id="services" className="section-muted py-20 md:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Expertise</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="section-kicker mb-3 text-sm font-semibold">Services</p>
+          <h2 className="section-heading text-3xl md:text-4xl font-bold">Our Expertise</h2>
+          <div className="brand-divider mx-auto mt-4"></div>
+          <p className="body-copy mt-4 text-lg max-w-3xl mx-auto">
             We provide a comprehensive range of services to meet the diverse needs of modern construction and infrastructure projects.
           </p>
         </div>

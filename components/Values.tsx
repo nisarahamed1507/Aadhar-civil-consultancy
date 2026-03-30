@@ -4,22 +4,24 @@ import { VALUES } from '../constants';
 import type { Value } from '../types';
 
 const ValueCard: React.FC<{ value: Value }> = ({ value }) => (
-  <div className="text-center p-4">
-    <div className="flex items-center justify-center h-20 w-20 rounded-full bg-white shadow-lg mx-auto mb-4">
-      <value.icon className="h-10 w-10 text-orange-500" />
+  <div className="brand-card-muted rounded-[1.75rem] p-6 text-center">
+    <div className="brand-icon-chip mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full">
+      <value.icon className="h-10 w-10 text-[#EC6630]" />
     </div>
-    <h3 className="text-xl font-semibold text-gray-900">{value.title}</h3>
-    <p className="mt-2 text-gray-600">{value.description}</p>
+    <h3 className="text-xl font-semibold text-[#263646]">{value.title}</h3>
+    <p className="body-copy mt-2">{value.description}</p>
   </div>
 );
 
 const Values: React.FC = () => {
   return (
-    <section id="values" className="py-20 md:py-28 bg-white">
+    <section id="values" className="section-muted py-20 md:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Core Values</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="section-kicker mb-3 text-sm font-semibold">Principles</p>
+          <h2 className="section-heading text-3xl md:text-4xl font-bold">Our Core Values</h2>
+          <div className="brand-divider mx-auto mt-4"></div>
+          <p className="body-copy mt-4 text-lg max-w-3xl mx-auto">
             The principles that guide our work, define our culture, and drive our commitment to excellence.
           </p>
         </div>

@@ -41,13 +41,15 @@ const About: React.FC<AboutProps> = ({ showVideo = false }) => {
   }, [currentIndex, isPaused, goToNext, showVideo]);
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-white">
+    <section id="about" className="section-surface py-20 md:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <p className="section-kicker mb-3 text-sm font-semibold">About Aadhar</p>
+          <h2 className="section-heading text-3xl md:text-4xl font-bold">
             Engineering a Foundation of Trust
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="brand-divider mx-auto mt-4"></div>
+          <p className="body-copy mt-4 text-lg max-w-3xl mx-auto">
             Aadhar Civil Consultancy provides a one-stop solution for design, testing, supervision, and certification, built on expertise and scientific methods.
           </p>
         </div>
@@ -55,24 +57,24 @@ const About: React.FC<AboutProps> = ({ showVideo = false }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+              <div className="brand-icon-chip flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full">
                 <Eye size={24} />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-gray-900">Our Vision</h3>
-                <p className="mt-2 text-gray-600">{COMPANY_INFO.vision}</p>
+                <h3 className="text-xl font-semibold text-[#263646]">Our Vision</h3>
+                <p className="body-copy mt-2">{COMPANY_INFO.vision}</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+              <div className="brand-icon-chip flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full">
                 <Target size={24} />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-gray-900">Our Mission</h3>
-                <ul className="mt-2 space-y-2 text-gray-600">
+                <h3 className="text-xl font-semibold text-[#263646]">Our Mission</h3>
+                <ul className="body-copy mt-2 space-y-2">
                   {COMPANY_INFO.mission.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                      <CheckCircle className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-[#EC6630]" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -122,14 +124,14 @@ const About: React.FC<AboutProps> = ({ showVideo = false }) => {
 
               <button
                 onClick={goToPrevious}
-                className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="absolute top-1/2 left-3 -translate-y-1/2 rounded-full bg-[#263646]/75 p-2 text-white transition-colors hover:bg-[#EC6630] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#263646]"
                 aria-label="Previous slide"
               >
                 <ChevronLeft size={24} />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="absolute top-1/2 right-3 -translate-y-1/2 rounded-full bg-[#263646]/75 p-2 text-white transition-colors hover:bg-[#EC6630] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#263646]"
                 aria-label="Next slide"
               >
                 <ChevronRight size={24} />
@@ -141,7 +143,7 @@ const About: React.FC<AboutProps> = ({ showVideo = false }) => {
                     key={slideIndex}
                     onClick={() => goToSlide(slideIndex)}
                     aria-label={`Go to slide ${slideIndex + 1}`}
-                    className={`w-3 h-3 rounded-full transition-colors ${currentIndex === slideIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'}`}
+                    className={`h-3 w-3 rounded-full transition-colors ${currentIndex === slideIndex ? 'bg-[#EC6630]' : 'bg-white/50 hover:bg-white/75'}`}
                   ></button>
                 ))}
               </div>

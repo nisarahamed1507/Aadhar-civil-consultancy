@@ -4,11 +4,13 @@ import TeamMemberCard from './TeamMemberCard';
 
 const Team: React.FC = () => {
     return (
-        <section id="team" className="py-20 md:py-28 bg-white">
+        <section id="team" className="section-surface py-20 md:py-28">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Team</h2>
-                    <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <p className="section-kicker mb-3 text-sm font-semibold">Leadership</p>
+                    <h2 className="section-heading text-3xl md:text-4xl font-bold">Our Team</h2>
+                    <div className="brand-divider mx-auto mt-4"></div>
+                    <p className="body-copy mt-4 text-lg max-w-3xl mx-auto">
                         Meet the experienced professionals dedicated to delivering excellence in every project. Our team combines technical expertise with a commitment to quality and innovation.
                     </p>
                 </div>

@@ -122,12 +122,14 @@ const GalleryPage: React.FC = () => {
                 keywords="civil engineering equipment gallery, CBR testing machine, compression testing, NDT rebound hammer, geotechnical equipment, soil testing apparatus, Raipur"
             />
 
-            <div className="min-h-screen bg-gray-50">
+            <div className="min-h-screen section-muted">
                 <div className="container mx-auto px-4 py-16">
                     {/* Header */}
                     <div className="text-center mb-10">
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Equipment & Gallery</h1>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="section-kicker mb-3 text-sm font-semibold">Laboratory & Field Tools</p>
+                        <h1 className="section-heading mb-4 text-4xl md:text-5xl font-bold">Equipment & Gallery</h1>
+                        <div className="brand-divider mx-auto mt-4"></div>
+                        <p className="body-copy mt-4 text-lg max-w-3xl mx-auto">
                             A look at the state-of-the-art laboratory equipment and field tools we use to deliver precise civil engineering testing and analysis.
                         </p>
                     </div>
@@ -139,8 +141,8 @@ const GalleryPage: React.FC = () => {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${activeCategory === cat
-                                        ? 'bg-blue-600 text-white shadow-md'
-                                        : 'bg-white text-gray-600 border border-gray-200 hover:border-blue-400 hover:text-blue-600'
+                                        ? 'brand-button text-white shadow-md'
+                                        : 'bg-white text-[#415363] border border-[rgba(38,54,70,0.12)] hover:border-[#EC6630] hover:text-[#EC6630]'
                                     }`}
                             >
                                 {cat}
@@ -153,7 +155,7 @@ const GalleryPage: React.FC = () => {
                         {filtered.map((image) => (
                             <div
                                 key={image.id}
-                                className="group relative overflow-hidden rounded-xl shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white"
+                                className="brand-card group relative cursor-pointer overflow-hidden rounded-xl bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                                 onClick={() => setSelectedImage(image)}
                             >
                                 <ImageWithLoader
@@ -166,7 +168,7 @@ const GalleryPage: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                                         <h2 className="text-base font-semibold mb-1">{image.title}</h2>
-                                        <span className="inline-block bg-blue-600 text-xs px-3 py-1 rounded-full">
+                                        <span className="brand-pill inline-block rounded-full px-3 py-1 text-xs">
                                             {image.category}
                                         </span>
                                     </div>
@@ -185,7 +187,7 @@ const GalleryPage: React.FC = () => {
                             aria-label={selectedImage.title}
                         >
                             <button
-                                className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors focus:outline-none"
+                                className="absolute top-4 right-4 text-white transition-colors hover:text-[#EC6630] focus:outline-none"
                                 onClick={() => setSelectedImage(null)}
                                 aria-label="Close image viewer"
                             >
@@ -200,7 +202,7 @@ const GalleryPage: React.FC = () => {
                                     loading="lazy"
                                 />
                                 <p className="text-white mt-4 text-lg font-semibold">{selectedImage.title}</p>
-                                <span className="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full mt-2">{selectedImage.category}</span>
+                                <span className="brand-pill mt-2 inline-block rounded-full px-3 py-1 text-xs">{selectedImage.category}</span>
                             </div>
                         </div>
                     )}
